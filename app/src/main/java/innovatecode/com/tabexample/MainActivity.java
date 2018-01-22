@@ -54,6 +54,10 @@ public class MainActivity extends AppCompatActivity {
         viewPager = (ViewPager) findViewById(R.id.pager);
         // Assign created adapter to viewPager
         viewPager.setAdapter(new TabsPagerAdapter(getSupportFragmentManager()));
+
+        TabLayout tabLayout = (TabLayout) findViewById(R.id.tab_layout);
+        // This method setup all required method for TabLayout with Viewpager
+        tabLayout.setupWithViewPager(viewPager);
     }
 
     private void setUpLandscapeLayout() {
